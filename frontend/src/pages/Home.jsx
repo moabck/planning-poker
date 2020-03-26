@@ -182,14 +182,10 @@ const Home = ({ user, polls, checkForChange }) => {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <Container maxWidth='lg' className={classes.container}>
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <PollList polls={polls} />
-              </Paper>
-            </Grid>
-          </Grid>
+        <Container maxWidth='xl' className={classes.container}>
+          <Paper className={classes.paper}>
+            <PollList polls={polls} />
+          </Paper>
         </Container>
       </main>
     </div>

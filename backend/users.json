@@ -3,14 +3,14 @@
     {
       "id": 1,
       "name": "Jane Doe",
-      "username": "jane",
-      "password": "jane"
+      "username": "jane.doe@mail.com",
+      "password": "janedoe"
     },
     {
       "id": 2,
       "name": "John Doe",
-      "username": "john",
-      "password": "john"
+      "username": "john.doe@mail.com",
+      "password": "johndoe"
     }
   ]
 }

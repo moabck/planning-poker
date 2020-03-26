@@ -70,7 +70,7 @@ const CreateNewPollForm = ({ user, createPoll }) => {
         <Button
           type='submit'
           variant='contained'
-          color='secondary'
+          color='default'
           className={classes.submit}
         >
           Create Poll

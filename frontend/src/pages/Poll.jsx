@@ -22,6 +22,7 @@ import {
 import { connect } from 'react-redux'
 import { Redirect, useLocation } from 'react-router-dom'
 import VoteChart from '../components/VoteChart.jsx'
+import PollInfo from '../components/PollInfo.jsx'
 import { checkForChange } from './actions'
 
 const drawerWidth = 240
@@ -187,6 +188,11 @@ const Poll = ({ user, polls, checkForChange }) => {
         <Container maxWidth='lg' className={classes.container}>
           <Paper className={classes.paper}>
             {(poll) ? <VoteChart user={user} pollId={poll.get('id')} polls={polls} /> : null}
+          </Paper>
+        </Container>
+        <Container align='left' maxWidth='lg' className={classes.container}>
+          <Paper className={classes.paper}>
+            {(poll) ? <PollInfo pollId={poll.get('id')} polls={polls} /> : null}
           </Paper>
         </Container>
       </main>

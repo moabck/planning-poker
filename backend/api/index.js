@@ -39,7 +39,7 @@ routs.post("/vote", (request, response) => {
     pollObject.id === poll.id ? poll : pollObject
   );
   fs.writeFile(
-    "../polls.json",
+    "./polls.json",
     JSON.stringify(pollData),
     (error) => error && console.log(error)
   );
@@ -64,7 +64,7 @@ routs.post("/create-new-poll", (request, response) => {
   };
   pollData.polls.push(newPoll);
   fs.writeFile(
-    "../polls.json",
+    "./polls.json",
     JSON.stringify(pollData),
     (error) => error && console.log(error)
   );

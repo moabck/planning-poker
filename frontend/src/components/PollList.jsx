@@ -29,8 +29,8 @@ export default function Polls({ polls }) {
           {(polls || []).map((row) => (
             <TableRow key={row.get('id')}>
               <TableCell>{row.get('title')}</TableCell>
-              <TableCell>{row.get('description')}</TableCell>
-              <TableCell>{DateTime.fromISO(row.get('creationDate')).toFormat('yyyy LLL dd')}</TableCell>
+              <TableCell size='small'>{row.get('description').split(".")[0]} ...</TableCell>
+              <TableCell>{DateTime.fromISO(row.get('creationDate')).toFormat('dd LLL yyyy, hh:mm')}</TableCell>
               <TableCell>{row.get('creator')}</TableCell>
               <TableCell align='right'>
                 <Button
