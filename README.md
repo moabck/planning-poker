@@ -1,6 +1,5 @@
 # planning-poker
 
--
 
 ### How to run the application:
 
@@ -13,5 +12,5 @@
 
 | Username          | Password |
 | ----------------- | -------- |
-| jane.doe@mail.com | janedoe  |
-| john.doe@mail.com | johndoe  |
+| *jane.doe@mail.com* | *janedoe*  |
+| *john.doe@mail.com* | *johndoe*  |
