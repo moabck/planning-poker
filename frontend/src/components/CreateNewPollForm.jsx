@@ -17,7 +17,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
   submit: {
-    margin: theme.spacing(3, 0, 2),
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    borderRadius: 3,
+    border: 0,
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
   },
 }))
 
@@ -54,6 +60,7 @@ const CreateNewPollForm = ({ user, createPoll }) => {
           label='Title'
           name='title'
           autoFocus
+          color='secondary'
         />
         <TextField
           variant='outlined'
@@ -66,11 +73,12 @@ const CreateNewPollForm = ({ user, createPoll }) => {
           multiline={true}
           rows={10}
           maxrows={50}
+          color='secondary'
         />
         <Button
           type='submit'
-          variant='contained'
-          color='default'
+          variant='outlined'
+          color='secondary'
           className={classes.submit}
         >
           Create Poll

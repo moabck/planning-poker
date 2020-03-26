@@ -91,7 +91,7 @@ const VoteChart = ({ user, pollId, polls, placeVoteData }) => {
                   placeVoteData({ poll: poll, option, userId: user.get('id') })
                 }
                 style={{ marginLeft: '2em', marginRight: '2em' }}
-                variant='contained'
+                variant='outlined'
                 disabled={getHasVoted.vote === option}
               >
                 {option}

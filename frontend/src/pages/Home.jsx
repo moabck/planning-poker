@@ -127,6 +127,7 @@ const Home = ({ user, polls, checkForChange }) => {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
+        color='inherit'
         position='absolute'
         className={clsx(classes.appBar, open && classes.appBarShift)}
       >

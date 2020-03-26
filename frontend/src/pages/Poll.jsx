@@ -135,6 +135,7 @@ const Poll = ({ user, polls, checkForChange }) => {
       <CssBaseline />
       <AppBar
         position='absolute'
+        color='inherit'
         className={clsx(classes.appBar, open && classes.appBarShift)}
       >
         <Toolbar className={classes.toolbar}>

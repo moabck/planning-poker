@@ -35,7 +35,7 @@ export default function Polls({ polls }) {
               <TableCell align='right'>
                 <Button
                   onClick={() => setRedirect(row.get('id'))}
-                  color='primary'
+                  color='secondary'
                 >
                   View poll
                 </Button>
