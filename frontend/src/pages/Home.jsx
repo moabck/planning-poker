@@ -106,7 +106,6 @@ const useStyles = makeStyles((theme) => ({
 const Home = ({ user, polls, checkForChange }) => {
   const classes = useStyles()
   const [open, setOpen] = React.useState(true)
-  useEffect(() => {console.log(polls)}, [polls])
   useEffect(() => {
     const interval = setInterval(() => {
       if (polls) {checkForChange(polls)}

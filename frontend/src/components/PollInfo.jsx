@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default function PollInfo({ pollId, polls }) {
+const PollInfo = ({ pollId, polls }) => {
   const poll = polls.filter((pollObject) => pollObject.get('id') === pollId).first()
   const classes = useStyles()
   return (
@@ -25,3 +25,5 @@ export default function PollInfo({ pollId, polls }) {
     </React.Fragment>
   )
 }
+
+export default PollInfo

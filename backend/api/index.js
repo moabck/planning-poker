@@ -3,7 +3,7 @@ const routs = express.Router();
 const fs = require("fs");
 const userData = require("../users.json");
 let pollData = require("../polls.json");
-const Immutable = require('immutable')
+const Immutable = require("immutable");
 
 routs.get("/sign-in/:username/:password", (request, response) => {
   const username = request.params.username;
@@ -72,11 +72,9 @@ routs.post("/create-new-poll", (request, response) => {
 });
 
 routs.get("/check-for-change/:hash", (request, response) => {
-  const backendHash = Immutable.fromJS(pollData.polls).hashCode()
-  const frontendHash = request.params.hash
-  console.log('backendHash: ', backendHash)
-  console.log('frontendHash: ', frontendHash)
-  if ( Number(frontendHash) === backendHash) {
+  const backendHash = Immutable.fromJS(pollData.polls).hashCode();
+  const frontendHash = request.params.hash;
+  if (Number(frontendHash) === backendHash) {
     return response.status(200).send({ change: false });
   } else {
     return response.status(200).send({ change: true, polls: pollData.polls });

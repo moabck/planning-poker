@@ -3,7 +3,6 @@ import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Drawer from '@material-ui/core/Drawer'
-import Box from '@material-ui/core/Box'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import List from '@material-ui/core/List'
@@ -24,14 +23,6 @@ import { connect } from 'react-redux'
 import { Redirect, useLocation } from 'react-router-dom'
 import  CreateNewPollForm  from '../components/CreateNewPollForm.jsx'
 
-function Copyright() {
-  return (
-    <Typography variant='body2' color='textSecondary' align='center'>
-      {'Created by Moa Bäck'}
-    </Typography>
-  )
-}
-
 const drawerWidth = 240
 
 const useStyles = makeStyles((theme) => ({
@@ -39,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   toolbar: {
-    paddingRight: 24, // keep right padding when drawer is closed
+    paddingRight: 24,
   },
   toolbarIcon: {
     display: 'flex',
@@ -186,9 +177,6 @@ const CreateNewPoll = ({ user }) => {
           <Paper className={classes.paper}>
             <CreateNewPollForm user={user} />
           </Paper>
-          <Box pt={4}>
-            <Copyright />
-          </Box>
         </Container>
       </main>
     </div>

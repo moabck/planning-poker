@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button'
 import { Redirect } from 'react-router-dom'
 import { DateTime } from 'luxon'
 
-export default function Polls({ polls }) {
+const Polls = ({ polls }) => {
   const [getRedirect, setRedirect] = useState()
   if (getRedirect) {
     return <Redirect to={`/poll/${getRedirect}`} />
@@ -47,3 +47,5 @@ export default function Polls({ polls }) {
     </React.Fragment>
   )
 }
+
+export default Polls
